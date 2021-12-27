@@ -1,17 +1,16 @@
 class Main {
   public static void main(String[] args){
-    System.out.println("[数当てゲーム]");
-    int ans = new java.util.Scanner(System.in).nextInt();
-    for(int i = 0; i < 5; i++){
-      System.out.println("0~9までの数字を入力してください");
-      int num = new java.util.Scanner(System.in).nextInt();
-      if(ans == num){
-        System.out.println("アタリ！");
-        break;
-      } else {
-        System.out.println("違います");
+
+    int[] numbers = {3, 4, 9};
+
+    System.out.println("一桁の数字を入力してください");
+
+    int input = new java.util.Scanner(System.in).nextInt();
+
+    for(int n : numbers){
+      if(n == input){
+        System.out.println("アタリ");
       }
     }
-    System.out.println("ゲームを終了します");
   }
 }
