@@ -1,16 +1,17 @@
 class Main {
   public static void main(String[] args){
+    String title = "お誘い";
+    String address = "uso800@xxxx.com";
+    String text = "今度、飲みにいきませんか";
 
-    int[] numbers = {3, 4, 9};
-
-    System.out.println("一桁の数字を入力してください");
-
-    int input = new java.util.Scanner(System.in).nextInt();
-
-    for(int n : numbers){
-      if(n == input){
-        System.out.println("アタリ");
-      }
-    }
+    email(title,address,text);
   }
+
+  public static void email(String title, String address, String text){
+
+    System.out.println(address + "に、以下のメールを送信しました");
+    System.out.println("件名：" + title);
+    System.out.println("本文：" + text);
+  }
+
 }
