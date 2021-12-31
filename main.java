@@ -1,26 +1,15 @@
-import java.util.Scanner;
-import java.util.Random;
-
 class Main {
   public static void main(String[] args){
-    int ans = new Random().nextInt(10) + 1;
-    int count = 0;
 
+    Hero h = new Hero();
+    h.name = "ミナト";
+    h.hp = 100;
 
-    while(true){
+    System.out.println("勇者" + h.name + "を生み出しました");
 
-          System.out.print("your guess?");
-          int guess = new Scanner(System.in).nextInt();
-          count++;
-
-          if( ans == guess){
-            System.out.println("OK!");
-            break;
-          } else if( ans > guess ) {
-            System.out.println("The ans is higher");
-          } else if( ans < guess) {
-            System.out.println("The ans is lower");
-          }
-        }
+    h.sit(5);
+    h.slip();
+    h.sit(5);
+    h.run();
   }
 }
